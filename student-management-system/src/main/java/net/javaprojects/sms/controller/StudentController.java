@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import net.javaprojects.sms.entity.Student;
 import net.javaprojects.sms.service.StudentService;
 
+//testing commits
+
 @Controller
 public class StudentController {
 
