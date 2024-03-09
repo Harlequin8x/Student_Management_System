@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import net.javaprojects.sms.entity.Student;
 import net.javaprojects.sms.service.StudentService;
 
-//testing commits
-
 @Controller
 public class StudentController {
 
@@ -64,6 +62,13 @@ public class StudentController {
 		
 		// save updated student object
 		studentService.updateStudent(existingStudent);
+		return "redirect:/students";
+	}
+	
+	@GetMapping("/students/{id}")
+	// handler method to handle delete student request
+	public String deleteStudent(@PathVariable Long id) {
+		studentService.deleteStudentById(id);		
 		return "redirect:/students";
 	}
 }
